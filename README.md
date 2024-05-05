@@ -1,6 +1,6 @@
 # JetBrain Intership test task
 ## Files
-* *extract_func.py* - specify variable REP_DIR with path that lead to Kotlin repo, will extract and prepare dataset (Expected clean formating how it is done in Kotlin repo, tried grammar parsing, too slow). Dataset have same format as CodeXGlue-MethodGeneration - {"signature":"", "docstring":"", "body":""}
+* *extract_func.py* - specify variable REP_DIR with path that lead to Kotlin repo, will extract and prepare dataset (Expected clean formating how it is done in Kotlin repo, tried grammar parsing, too slow. More in *grammar_parser*). Dataset have same format as CodeXGlue-MethodGeneration - {"signature":"", "docstring":"", "body":""}
 * *evaluate.py*; *evaluate.ipynb* - use phi1.5 model to generate prediction file in format needed for CodeXGlue-MethodGeneration evaluator
 * *evaluator.py*; *bleu.py* - evaluator files taken from CodeXGlue-MethodGeneration
 Usage:
