@@ -1,0 +1,5 @@
+datasets==2.19.0
+transformers==4.40.1
+tqdm==4.65.0
+json5==0.9.14
+torch==2.1.0

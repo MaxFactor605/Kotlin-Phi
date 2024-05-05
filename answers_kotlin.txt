@@ -1,0 +1,100 @@
+a.x = 42    return value}
+}
+return generateSequence(file.parentFile) { it.parentFile }        .takeWhile { it != stopFile }        .map { it.name }        .toList().asReversed()        .fold(testGroupOutputDir, ::File)}
+"${debugString(this)} -> ${debugString(value)}"
+val (a, _) = idAndLog(Pair(idAndLog(1), idAndLog(2)))    val (_, b) = idAndLog(Pair(idAndLog(3), idAndLog(4)))    log += "result:$a,$b;"}
+property: T get() = TODO()function(value: T): T = value
+val targetDependent = TargetDependent(listOf(LeafCommonizerTarget("a"), LeafCommonizerTarget("b"))) {        (it as LeafCommonizerTarget).name    }
+val supportedTranslationModes = arrayOf(        TranslationMode.FULL_DEV,        TranslationMode.FULL_PROD_MINIMIZED_NAMES,        TranslationMode.PER_MODULE_DEV,        TranslationMode.PER_MODULE_PROD_MINIMIZED_NAMES,    )    val testModules = testServices.moduleStructure.modules    val allTestFiles = testModules.flatMap { it.files }    for (module in testModules) {        for (mode in supportedTranslationModes) {            val sourceMapFile =                File(JsEnvironmentConfigurator.getJsModuleArtifactPath(testServices, module.name, mode) + ".js.map")            if (!sourceMapFile.exists()) continue
+val timeoutMessage = if (exitCode == -1) {        "WARNING: probably a timeout\n"    } else ""    val exitCodeMismatch = !expectedExitStatusChecker(exitCode)    if (exitCodeMismatch) {        val message = if (expectedExitStatus != null)            "Expected exit status: $expectedExitStatus, actual: $exitCode"        else            "Actual exit status doesn't match with exit status checker: $exitCode"        check(expectedFail) {            """                |${timeoutMessage}Test failed. $message                |stdout:                |$stdOut                |stderr:                |$stdErr                """.trimMargin()        }        println("Expected failure. $message")    }
+return f()}
+val localBreakExistsBackup = localBreakExists
+"Generates bitcode for the artifact '${task.name}' for all supported and declared targets'"
+assertEquals(true, A().canBeCastedTo<A>(), "A().canBeCastedTo<A>()")    assertEquals(false, A().canBeCastedTo<B>(), "A().canBeCastedTo<B>()")    assertEquals(true, C().canBeCastedTo<A>(), "C().canBeCastedTo<A>()")
+position++}
+var result = ""    for (x in 3 downTo 1) {        result += x    }    return result}
+for (i in 1..times) {        action()    }}
+val destDir = File("libraries/tools/kotlin-gradle-compiler-types/src/generated/kotlin")
+require(amount != null)    return ByteArray(amount) { readByte() }}
+foo()}
+f(1)}
+val header = header(        """        class A<T>        class B        val foo: A<B> get() = error("stub")        """.trimIndent()    )    assertEquals("A<B *> *", header.renderTypesOfSymbol("foo"))}
+return mapNotNull { dependency -> if (dependency.type is T) dependency.artifact as A else null }}
+lateinit var kotlinContext: KotlinCompileContext
+var hashCode = 1
+public constructor(arg: Int): this() {}constructor(arg: String): this() {}public fun unchangedFun() {}
+val b = B()    b.boo()    b.foo()    b.bar()    if (result != "BAC") return "FAIL: $result"
+for (a in a1) {        return "fail"    }    return "OK"}
+doRandomFlagArgumentsTest<K2MetadataCompilerArguments>()}
+@Test    fun outer() = Unit
+ame("createO")tructor(): this("O")
+createNamer(moduleDescriptor, emptyList(), topLevelNamePrefix)
+assertEquals(0, squareMultipliedByTwo(1))    assertEquals(18, squareMultipliedByTwo(3))    assertEquals(32, squareMultipliedByTwo(4))
+val newPath = when (currentPath) {        is Path.Package -> {            check(ownerClassTypeParametersCount == 0)            currentPath.nestedCallableMember(memberName)        }        is Path.Classifier -> {            check(ownerClassTypeParametersCount >= 0)            currentPath.nestedCallableMember(memberName)        }        else -> error("Illegal state")    }
+if (categoryName != null) {        append(" (")        append(categoryName)        append(')')    }}
+test(null)    test(23)
+println(126 / 3)}
+tasks().forEach { it.configure { dumpParameters(flag) } }
+builder {        Child().runTest()    }    return result}
+visitElement(comment)
+val a = 1    return a}
+val decomposer = with (statement) {        val extractable = match(canBeExtractedByInliner)        val containsExtractable = withParentsOfNodes(extractable)        val nodesWithSideEffect = match {            !(it is JsLiteral.JsValueLiteral || (it is JsExpression && it.sideEffects == SideEffectKind.PURE))        }        val containsNodeWithSideEffect = withParentsOfNodes(nodesWithSideEffect)
+val globalDirectives = testServices.moduleStructure.allDirectives    if (WasmEnvironmentConfigurationDirectives.CHECK_TYPESCRIPT_DECLARATIONS !in globalDirectives) return
+// TODO: this call is compiled via package facade or package part depending on if callee comes from compiled or source    // Must be uncommented when modules are supported in compiler    //b.b()}
+"other is Char && this.code == other.code".setAsExpressionBody()}
+var b: Byte = 0x7F    b++    if (b.toInt() != -0x80) return "fail1a: $b"    b--    if (b.toInt() != 0x7F) return "fail1b: $b"
+if (JsEnvironmentConfigurationDirectives.NO_COMMON_FILES in module.directives) return emptyList()    // Add the files only to common modules with no dependencies, otherwise they'll produce "IrSymbol is already bound"    if (module.allDependencies.isNotEmpty()) {        return emptyList()    }    return getAdditionalKotlinFiles(module.files.first().originalFile.parent).map { it.toTestFile() }}
+if (!currentlyProcessed.add(this)) {        return true    }
+val out = StringBuilder()    val p = Printer(out, indentUnit = Printer.TWO_SPACE_INDENT)
+if (0 != args.size) error("fail")
+@JsName("testNameB")fun testFunction(): StringtestTestInterfaceB(x: TestInterfaceB) = x.testFunction()
+return isIgnoredWithIGNORE_NATIVE(registeredDirectives) || isIgnoredWithIGNORE_BACKEND { registeredDirectives.get(it) }}
+Architecture.ARM32 -> false    Architecture.X86, Architecture.ARM64, Architecture.X64 -> true} && this != KonanTarget.WATCHOS_ARM64
+
+val inMemoryStorageWrapperMock = InMemoryStorageWrapperMock()    useTransaction {        registerInMemoryStorageWrapper(inMemoryStorageWrapperMock)    }    assertTrue(inMemoryStorageWrapperMock.reset)}
+fun foo(): Char    fun maybeFoo(): Char?    fun fooNull(): Char?    fun actualTypeOfChar(x: Char): String    fun actualTypeOfMaybeChar(x: Char?): String
+assertSwiftThrowing { unit() }assertSwiftThrowing { nothing() }assertSwiftThrowing { any() }assertSwiftThrowing { block() }
+
+SusFun0Prop    SusFun1Prop    SusFun2Prop
+compareFlags(classContext, classA, classB, CLASS_FLAGS)    compareAnnotationLists(classContext, classA.annotations, classB.annotations)
+loop@ for (i in 1..10) {        test1(state)        if (i == 2) break@loop    }}
+log("get Ea.A")    E.A.toString()    log("get E.B")    E.B.toString()    log("get E.C")    E.C.toString()
+JsAstProtoBuf.UnaryOperation.Type.BIT_NOT -> JsUnaryOperator.BIT_NOT    JsAstProtoBuf.UnaryOperation.Type.DEC -> JsUnaryOperator.DEC    JsAstProtoBuf.UnaryOperation.Type.DELETE -> JsUnaryOperator.DELETE    JsAstProtoBuf.UnaryOperation.Type.INC -> JsUnaryOperator.INC    JsAstProtoBuf.UnaryOperation.Type.NEG -> JsUnaryOperator.NEG    JsAstProtoBuf.UnaryOperation.Type.POS -> JsUnaryOperator.POS    JsAstProtoBuf.UnaryOperation.Type.NOT -> JsUnaryOperator.NOT    JsAstProtoBuf.UnaryOperation.Type.TYPEOF -> JsUnaryOperator.TYPEOF    JsAstProtoBuf.UnaryOperation.Type.VOID -> JsUnaryOperator.VOID}
+call("a.a.A.passing")}
+"other is Boolean && kotlin.native.internal.areEqualByValue(this, other)".setAsExpressionBody()}
+rn C().foo()
+val res = jsBox().res    if (res != "pingpong") {        return "Fail: ${res}"    }
+compareUniqueEntityLists(        containerContext = containerContext,        entityListA = functionListA,        entityListB = functionListB,        entityKind = EntityKind.Function,        groupingKeySelector = { _, function -> function.dumpToString() },        entitiesComparator = ::compareFunctions    )}
+memScoped {        val basicUnion = alloc<BasicUnion>()        for (value in Short.MIN_VALUE..Short.MAX_VALUE) {            basicUnion.ll = value.toLong()            val expected =  if (Platform.isLittleEndian) {                value            } else {                value.toLong() ushr (Long.SIZE_BITS - Short.SIZE_BITS)            }            assertEquals(expected.toShort(), basicUnion.s)        }    }    memScoped {        val struct = alloc<StructWithUnion>()        struct.`as`.i = Float.NaN.toRawBits()        assertEquals(Float.NaN, struct.`as`.f)    }    memScoped {        val union = alloc<Packed>()        union.b = 1u        var expected = if (Platform.isLittleEndian) {            1u        } else {            1u shl (Int.SIZE_BITS - Byte.SIZE_BITS)        }        assertEquals(expected, union.i)        union.i = 0u        assertEquals(0u, union.b)    }    return "OK"}
+val s = object : A<R>(param()) {        val o1 = jobO()
+if (test1("start") != "OK") return "fail1"    if (test1("nostart") != "fail") return "fail2"
+val engine = ScriptEngineNashorn()
+return getFunctionDefinitionImpl(call, scope)!!}
+var c = A()    c = A()    c = A()    return if (a == 3) "OK" else "fail: $a"}
+// Test for abs(long): long    assertTrue("Incorrect long abs value",            abs(-19088976000089L) == 19088976000089L)    assertTrue("Incorrect long abs value",            abs(19088976000089L) == 19088976000089L)}
+var result = "fail"    test { it -> result = it }    return result}
+val split = version.split("(\\s+|\\.|-)".toRegex())    return XcodeVersion(        major = split[0].toIntOrNull() ?: return null,        minor = split.getOrNull(1)?.toIntOrNull() ?: return null,    )}
+if (args.size != 0) {        ok = "Fail with args zie"    } else {        ok = "OK"    }}
+return File(dir, "${module.indexedName}_${module.javaClassName}.java$fileNameSuffix")}
+val o = object {        fun bar() = O    }    return fetch(o.bar())}
+if (!descriptor.isSuspend) return
+if (!thisRef.hasData(desc.name)) return default    return thisRef.getData<R>(desc.name)}
+val sourceFile = project.file(source)    return sourceFile.parentFile.resolve(sourceFile.nameWithoutExtension + ".out")}
+val members = cls.unsubstitutedMemberScope.getContributedDescriptors(DescriptorKindFilter.CALLABLES)        .mapNotNull { it as? FunctionDescriptor }        .filter { it.containingDeclaration == cls && !it.kind.isReal && it.overriddenDescriptors.size > 1 }
+
+inline.f { println("to be inlined") }}
+val instantiationBuilder = JsAstProtoBuf.Instantiation.newBuilder()    instantiationBuilder.qualifier = serialize(x.constructorExpression)    x.arguments.forEach { instantiationBuilder.addArgument(serialize(it)) }    builder.instantiation = instantiationBuilder.build()}
+analysisResult.nodeMap[x] == null && x !in analysisResult.astNodesToEliminate
+if (scope !is JsFunctionScope) throw AssertionError("JsFunction is expected to have JsFunctionScope")
+if ("1".prop != 1) return "fail1";    if ("11".prop != 2) return "fail2";    if (("121" + "123").prop != 6) return "fail3";    if (1.quadruple != 4) return "fail4";    if (0.quadruple != 0) return "fail5";    return "OK";}
+}i !is SuspendFunction0<Unit>) return "FAIL 4"i is SuspendFunction1<*, *>) return "FAIL 6"
+assertEquals(        mockClassType("org/sample/Foo", nullable = true), createCommonizer().invoke(            listOf(                mockClassType("org/sample/Foo", nullable = true),                mockClassType("org/sample/Foo", nullable = true),                mockClassType("org/sample/Foo", nullable = true)            )        )    )}
+return this.copyOfUninitializedElements(newSize)}
+TypeUtils.getAllSupertypes(this).find(KotlinBuiltIns::isPrimitiveTypeOrNullablePrimitiveType) ?: this
+return a.func()}
+val header = header("""val foo: Byte get() = error("stub")""")    assertEquals("int8_t", header.renderTypesOfSymbol("foo"))}
+val type = CirClassType.createInterned(        classId = CirEntityId.create("kotlin.Array"), outerType = null, isMarkedNullable = false, arguments = listOf(            CirRegularTypeProjection(                projectionKind = Variance.OUT_VARIANCE,                type = CirFlexibleType(                    lowerBound = CirClassType.createInterned(                        classId = CirEntityId.create("kotlin/String"),                        outerType = null,                        arguments = emptyList(),                        isMarkedNullable = false,                    ),                    upperBound = CirClassType.createInterned(                        classId = CirEntityId.create("kotlin/String"),                        outerType = null,                        arguments = emptyList(),                        isMarkedNullable = true,                    )                )            )        )    )    assertEquals("kotlin.Array<out kotlin.String..kotlin.String?>", renderTypeForUnsafeNumberAnnotation(type))}
+if (x in analysisResult.astNodesToEliminate) {        ctx.removeMe()        return false    }    val node = analysisResult.nodeMap[x]?.original    return if (!isUsed(node)) {        ctx.removeMe()        false    }    else {        true    }}
+operator fun hasNext(): Boolean = enumerator.hasMoreElements()
+val inlineX = My(11)
+createEnum()
